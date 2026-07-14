@@ -1,49 +1,358 @@
-#popup{
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-display:none;
 
-position:fixed;
+body{
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
 
-top:0;
-left:0;
 
-width:100%;
-height:100%;
 
-background:rgba(0,0,0,.8);
+/* HEADER */
 
-justify-content:center;
+header{
 
-align-items:center;
+    min-height:100vh;
 
-z-index:9999;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    background:
+    radial-gradient(circle at top,#123d70,#050816 60%);
 
 }
+
+
+
+.logo{
+
+    font-size:50px;
+    font-weight:900;
+    letter-spacing:5px;
+
+}
+
+
+.logo span{
+
+    color:#009cff;
+
+}
+
+
+
+header h1{
+
+    font-size:55px;
+    margin:25px 0;
+
+}
+
+
+
+header p{
+
+    max-width:750px;
+
+    font-size:20px;
+
+    color:#bfc8da;
+
+    line-height:1.6;
+
+}
+
+
+
+
+
+/* BOTONES */
+
+
+.btn,
+button{
+
+    background:#008cff;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.btn:hover,
+button:hover{
+
+    background:#00c8ff;
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+/* SECCIONES */
+
+
+section{
+
+    padding:80px 10%;
+
+    text-align:center;
+
+}
+
+
+
+section h2{
+
+    font-size:40px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+.about p,
+section p{
+
+    color:#cbd3e3;
+
+    max-width:850px;
+
+    margin:auto;
+
+    line-height:1.7;
+
+    font-size:18px;
+
+}
+
+
+
+
+/* PLANES */
+
+
+.plans{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+}
+
+
+
+.plan{
+
+    width:300px;
+
+    background:#0b1225;
+
+    border:1px solid #174b80;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    transition:.3s;
+
+}
+
+
+
+.plan:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+    0 0 25px #008cff;
+
+}
+
+
+
+.plan h3{
+
+    color:#00aaff;
+
+    font-size:32px;
+
+}
+
+
+
+.price{
+
+    font-size:25px;
+
+    margin:20px;
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+
+
+.plan ul{
+
+    list-style:none;
+
+}
+
+
+.plan li{
+
+    margin:12px;
+
+    color:#d7deec;
+
+}
+
+
+
+
+
+/* POPUP COMPRA */
+
+
+#popup{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.8);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
 
 
 .popup-box{
 
-background:#0b1225;
+    background:#0b1225;
 
-border:2px solid #008cff;
+    border:2px solid #008cff;
 
-border-radius:20px;
+    border-radius:20px;
 
-padding:40px;
+    padding:40px;
 
-width:90%;
+    width:90%;
 
-max-width:450px;
+    max-width:450px;
 
-text-align:center;
+    text-align:center;
+
+    box-shadow:0 0 40px #008cff;
 
 }
 
 
+
+.popup-box h2{
+
+    color:#00aaff;
+
+}
+
+
+
 .popup-box p{
 
-line-height:1.8;
+    margin:25px 0;
 
-color:#ddd;
+    color:#ddd;
+
+    line-height:1.8;
+
+}
+
+
+
+/* CURSOR */
+
+
+.cursor{
+
+    width:22px;
+
+    height:22px;
+
+    border:2px solid white;
+
+    border-radius:50%;
+
+    position:fixed;
+
+    pointer-events:none;
+
+    z-index:99999;
+
+}
+
+
+
+
+
+footer{
+
+    background:#02040a;
+
+    padding:30px;
+
+    text-align:center;
+
+    color:#777;
 
 }
