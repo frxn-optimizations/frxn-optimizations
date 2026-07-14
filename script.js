@@ -1,9 +1,9 @@
-const popup = document.getElementById("popup");
-const selectedPlan = document.getElementById("selectedPlan");
-const paymentText = document.getElementById("paymentText");
-
-
 function openBuy(plan){
+
+    let popup = document.getElementById("popup");
+    let selectedPlan = document.getElementById("selectedPlan");
+    let paymentText = document.getElementById("paymentText");
+
 
     popup.style.display = "flex";
 
@@ -13,23 +13,22 @@ function openBuy(plan){
     if(plan === "FREE"){
 
         paymentText.innerHTML = `
-        Has seleccionado la optimización FREE.
+        Solicitaste la optimización FREE.
 
         <br><br>
 
         Para recibirla:
 
         <br>
-        1. Entrá al Discord de FRXN.
+        ✅ Entrá al Discord de FRXN.
         <br>
-        2. Abrí un ticket.
+        ✅ Abrí un ticket.
         <br>
-        3. Solicitala y seguí los pasos indicados.
+        ✅ Mandá la información solicitada.
 
         `;
 
-    }else{
-
+    } else {
 
         paymentText.innerHTML = `
 
@@ -39,67 +38,54 @@ function openBuy(plan){
 
         💳 Mercado Pago
 
-        <br>
+        <br><br>
 
         Alias:
 
         <br>
 
-        <b>OPTIFRXN</b>
-
+        <strong>OPTIFRXN</strong>
 
         <br><br>
 
-
-        Después de realizar el pago:
-
-        <br>
-
-        1. Guardá el comprobante.
+        Después del pago:
 
         <br>
-
-        2. Unite al Discord.
-
+        1) Guardá el comprobante.
         <br>
-
-        3. Abrí un ticket.
-
+        2) Entrá al Discord.
         <br>
-
-        4. Mandá la captura del pago.
-
+        3) Abrí un ticket.
         <br>
-
-        5. Recibirás tu optimización.
+        4) Mandá la captura.
+        <br>
+        5) Recibirás tu optimización.
 
         `;
 
-
     }
 
-
 }
-
 
 
 
 function closeBuy(){
 
-    popup.style.display = "none";
+    document.getElementById("popup").style.display = "none";
 
 }
 
 
 
+document.addEventListener("mousemove", function(e){
 
-const cursor = document.querySelector(".cursor");
+    let cursor = document.querySelector(".cursor");
 
+    if(cursor){
 
-document.addEventListener("mousemove",(e)=>{
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
 
-    cursor.style.left = e.clientX - 11 + "px";
-
-    cursor.style.top = e.clientY - 11 + "px";
+    }
 
 });
