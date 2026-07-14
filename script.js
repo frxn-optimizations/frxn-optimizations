@@ -1,91 +1,91 @@
-function openBuy(plan){
+const botones = document.querySelectorAll(".buy-btn");
 
-    let popup = document.getElementById("popup");
-    let selectedPlan = document.getElementById("selectedPlan");
-    let paymentText = document.getElementById("paymentText");
+const popup = document.getElementById("popup");
+const selectedPlan = document.getElementById("selectedPlan");
+const paymentText = document.getElementById("paymentText");
 
-
-    popup.style.display = "flex";
-
-    selectedPlan.innerHTML = plan;
+const close = document.getElementById("close");
 
 
-    if(plan === "FREE"){
+botones.forEach(boton => {
 
-        paymentText.innerHTML = `
-        Solicitaste la optimización FREE.
+    boton.addEventListener("click", function(){
 
-        <br><br>
+        let plan = this.dataset.plan;
 
-        Para recibirla:
+        popup.style.display = "flex";
 
-        <br>
-        ✅ Entrá al Discord de FRXN.
-        <br>
-        ✅ Abrí un ticket.
-        <br>
-        ✅ Mandá la información solicitada.
-
-        `;
-
-    } else {
-
-        paymentText.innerHTML = `
-
-        Método de pago:
-
-        <br><br>
-
-        💳 Mercado Pago
-
-        <br><br>
-
-        Alias:
-
-        <br>
-
-        <strong>OPTIFRXN</strong>
-
-        <br><br>
-
-        Después del pago:
-
-        <br>
-        1) Guardá el comprobante.
-        <br>
-        2) Entrá al Discord.
-        <br>
-        3) Abrí un ticket.
-        <br>
-        4) Mandá la captura.
-        <br>
-        5) Recibirás tu optimización.
-
-        `;
-
-    }
-
-}
+        selectedPlan.innerHTML = plan;
 
 
+        if(plan === "FREE"){
 
-function closeBuy(){
+            paymentText.innerHTML = `
+            Solicitaste FRXN FREE.
 
-    document.getElementById("popup").style.display = "none";
+            <br><br>
 
-}
+            Unite al Discord,
+            abrí un ticket y recibí tu optimización gratuita.
+            `;
+
+        }else{
+
+
+            paymentText.innerHTML = `
+
+            Método de pago:
+
+            <br><br>
+
+            💳 Mercado Pago
+
+            <br><br>
+
+            Alias:
+
+            <br>
+
+            <b>OPTIFRXN</b>
+
+            <br><br>
+
+            Después del pago:
+
+            <br>
+            ✅ Guardá el comprobante.
+            <br>
+            ✅ Entrá al Discord.
+            <br>
+            ✅ Abrí un ticket.
+            <br>
+            ✅ Mandá la captura.
+
+            `;
+
+        }
+
+
+    });
+
+
+});
+
+
+close.onclick = function(){
+
+popup.style.display="none";
+
+};
 
 
 
-document.addEventListener("mousemove", function(e){
 
-    let cursor = document.querySelector(".cursor");
+document.addEventListener("mousemove",function(e){
 
-    if(cursor){
+const cursor=document.querySelector(".cursor");
 
-        cursor.style.left = e.clientX + "px";
-        cursor.style.top = e.clientY + "px";
-
-    }
+cursor.style.left=e.clientX+"px";
+cursor.style.top=e.clientY+"px";
 
 });
