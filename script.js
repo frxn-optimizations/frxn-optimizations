@@ -1,92 +1,155 @@
-console.log("FRXN Script cargado correctamente");
+console.log("FRXN cargado");
 
 
-document.addEventListener("DOMContentLoaded", function(){
-
-    const botones = document.querySelectorAll(".buy-btn");
-
-    const popup = document.getElementById("popup");
-    const selectedPlan = document.getElementById("selectedPlan");
-    const paymentText = document.getElementById("paymentText");
-    const close = document.getElementById("close");
+const buttons = document.querySelectorAll(".buy");
 
 
-    botones.forEach(function(boton){
+const popup = document.getElementById("popup");
 
-        boton.addEventListener("click", function(){
+const planName = document.getElementById("plan-name");
 
-            const plan = this.getAttribute("data-plan");
+const message = document.getElementById("message");
 
-
-            popup.style.display = "flex";
-
-            selectedPlan.innerHTML = plan;
-
-
-            if(plan === "FREE"){
-
-                paymentText.innerHTML = `
-                Solicitud de FRXN FREE
-
-                <br><br>
-
-                Unite al Discord de FRXN,
-                abrí un ticket y solicitá tu optimización gratuita.
-
-                `;
-
-            } else {
-
-                paymentText.innerHTML = `
-
-                Método de pago:
-
-                <br><br>
-
-                💳 Mercado Pago
-
-                <br><br>
-
-                Alias:
-
-                <br>
-
-                <strong>OPTIFRXN</strong>
-
-                <br><br>
-
-                Después de pagar:
-
-                <br>
-                1. Guardá el comprobante.
-                <br>
-                2. Entrá al Discord.
-                <br>
-                3. Abrí un ticket.
-                <br>
-                4. Mandá la captura del pago.
-                <br>
-                5. Recibirás tu optimización.
-
-                `;
-
-            }
-
-        });
-
-    });
+const close = document.getElementById("close");
 
 
 
-    if(close){
+buttons.forEach(button => {
 
-        close.addEventListener("click", function(){
 
-            popup.style.display = "none";
+button.addEventListener("click", function(){
 
-        });
 
-    }
+let plan = this.getAttribute("data-plan");
+
+
+popup.style.display = "flex";
+
+
+planName.innerHTML = plan;
+
+
+
+if(plan === "FREE"){
+
+
+message.innerHTML = `
+
+Has seleccionado FRXN FREE.
+
+<br><br>
+
+Para recibir tu optimización:
+
+<br>
+
+✅ Entrá al Discord.
+
+<br>
+
+✅ Abrí un ticket.
+
+<br>
+
+✅ Solicitá tu optimización gratuita.
+
+<br><br>
+
+No olvides enviar la información solicitada.
+
+`;
+
+
+}else{
+
+
+message.innerHTML = `
+
+
+Método de pago:
+
+<br><br>
+
+
+💳 Mercado Pago
+
+
+<br><br>
+
+
+Alias:
+
+<br>
+
+
+<b>OPTIFRXN</b>
+
+
+<br><br>
+
+
+Después de realizar el pago:
+
+<br><br>
+
+
+1) Guardá el comprobante.
+
+<br>
+
+2) Entrá al Discord.
+
+<br>
+
+3) Abrí un ticket.
+
+<br>
+
+4) Mandá la captura del pago.
+
+<br>
+
+5) Recibirás tu optimización.
+
+
+`;
+
+
+}
+
+
+
+});
+
+
+});
+
+
+
+
+
+close.addEventListener("click",()=>{
+
+
+popup.style.display="none";
+
+
+});
+
+
+
+
+
+popup.addEventListener("click",function(e){
+
+
+if(e.target === popup){
+
+
+popup.style.display="none";
+
+
+}
 
 
 });
