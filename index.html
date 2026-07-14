@@ -13,41 +13,32 @@
 
 <div class="cursor"></div>
 
-
 <header>
 
 <div class="logo">
 FRXN<span>OPTIMIZATIONS</span>
 </div>
 
-<h1>
-Optimización avanzada para gamers
-</h1>
+<h1>Optimización avanzada para gamers</h1>
 
 <p>
 Mejorá el rendimiento de tu PC con configuraciones enfocadas en FPS,
 estabilidad y menor latencia.
 </p>
 
-<a href="#planes" class="btn">
-Ver planes
-</a>
+<a href="#planes" class="btn">Ver planes</a>
 
 </header>
 
 
-
-<section class="about">
+<section>
 
 <h2>¿Qué es FRXN?</h2>
 
 <p>
-FRXN Optimizations es un servicio dedicado a mejorar la experiencia
-gaming mediante ajustes de Windows, configuraciones del sistema y
-optimizaciones personalizadas.
-
-Nuestro objetivo es ayudarte a aprovechar al máximo tu equipo y conseguir
-un sistema más limpio, rápido y preparado para jugar.
+FRXN Optimizations es un servicio enfocado en mejorar la experiencia
+gaming mediante configuraciones del sistema, ajustes de rendimiento
+y optimizaciones personalizadas.
 </p>
 
 </section>
@@ -66,17 +57,15 @@ un sistema más limpio, rápido y preparado para jugar.
 
 <h3>FREE</h3>
 
-<p class="price">
-Gratis
-</p>
+<p class="price">Gratis</p>
 
 <ul>
 <li>Optimización básica</li>
 <li>Ajustes iniciales</li>
-<li>Acceso mediante Discord</li>
+<li>Soporte Discord</li>
 </ul>
 
-<button onclick="openBuy('FREE')">
+<button class="buy-btn" data-plan="FREE">
 Solicitar FREE
 </button>
 
@@ -88,9 +77,7 @@ Solicitar FREE
 
 <h3>PRO</h3>
 
-<p class="price">
-$2.50 USD
-</p>
+<p class="price">$2.50 USD</p>
 
 <ul>
 <li>Optimización avanzada</li>
@@ -98,7 +85,7 @@ $2.50 USD
 <li>Configuración personalizada</li>
 </ul>
 
-<button onclick="openBuy('PRO - $2.50 USD')">
+<button class="buy-btn" data-plan="PRO - $2.50 USD">
 Comprar
 </button>
 
@@ -110,17 +97,15 @@ Comprar
 
 <h3>ULTRA</h3>
 
-<p class="price">
-$5 USD
-</p>
+<p class="price">$5 USD</p>
 
 <ul>
 <li>Optimización completa</li>
-<li>Mejoras de rendimiento</li>
+<li>Mejor rendimiento</li>
 <li>Ajustes competitivos</li>
 </ul>
 
-<button onclick="openBuy('ULTRA - $5 USD')">
+<button class="buy-btn" data-plan="ULTRA - $5 USD">
 Comprar
 </button>
 
@@ -128,22 +113,19 @@ Comprar
 
 
 
-
-<div class="plan premium">
+<div class="plan">
 
 <h3>MAX</h3>
 
-<p class="price">
-$10 USD
-</p>
+<p class="price">$10 USD</p>
 
 <ul>
 <li>Todo incluido</li>
-<li>Configuración personalizada</li>
-<li>Soporte por Discord</li>
+<li>Soporte personalizado</li>
+<li>Optimización completa</li>
 </ul>
 
-<button onclick="openBuy('MAX - $10 USD')">
+<button class="buy-btn" data-plan="MAX - $10 USD">
 Comprar
 </button>
 
@@ -151,86 +133,72 @@ Comprar
 
 
 </div>
-
 
 </section>
 
 
 
-<section class="payments">
+<section>
 
 <h2>Métodos de pago</h2>
 
 <p>
 💳 Mercado Pago<br>
 💵 USD<br>
-🌎 Otros métodos disponibles mediante Discord
+🌎 Otros métodos por Discord
 </p>
-
 
 </section>
 
 
 
+<section>
 
-<section class="contact">
-
-<h2>Comunidad FRXN</h2>
+<h2>Discord FRXN</h2>
 
 <p>
-Unite a nuestro Discord para solicitar tu optimización,
-abrir tickets y recibir soporte.
+Abrí un ticket para solicitar tu optimización.
 </p>
 
+<br>
 
-<a class="btn" 
-href="https://discord.gg/ZzPRVuwuS"
-target="_blank">
-
+<a class="btn" href="https://discord.gg/ZzPRVuwuS" target="_blank">
 Abrir Discord
-
 </a>
-
 
 </section>
 
 
 
 
-
-<div id="popup" class="popup">
+<div id="popup">
 
 
 <div class="popup-box">
 
-
-<h2 id="selectedPlan">
-</h2>
+<h2 id="selectedPlan"></h2>
 
 
-<p id="paymentText">
-</p>
+<p id="paymentText"></p>
 
 
-<a href="https://discord.gg/ZzPRVuwuS"
-target="_blank"
-class="btn">
-
+<a class="btn" href="https://discord.gg/ZzPRVuwuS" target="_blank">
 Abrir Ticket Discord
-
 </a>
 
 
-<button onclick="closeBuy()">
+<br><br>
+
+
+<button id="close">
 Cerrar
 </button>
 
 
 </div>
 
+
 </div>
-
-
 
 
 
@@ -239,7 +207,6 @@ Cerrar
 © 2026 FRXN Optimizations
 
 </footer>
-
 
 
 <script src="script.js"></script>
