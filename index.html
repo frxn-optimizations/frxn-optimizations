@@ -1,130 +1,249 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRXN Optimizations</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FRXN Optimizations</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="cursor"></div>
 
-<header>
-    <h1>FRXN <span>OPTIMIZATIONS</span></h1>
-    <p>Mejorá tu rendimiento. Más FPS. Menos input lag.</p>
 
-    <a href="#planes" class="btn">Ver planes</a>
+<header>
+
+<div class="logo">
+FRXN<span>OPTIMIZATIONS</span>
+</div>
+
+<h1>
+Optimización avanzada para gamers
+</h1>
+
+<p>
+Mejorá el rendimiento de tu PC con configuraciones enfocadas en FPS,
+estabilidad y menor latencia.
+</p>
+
+<a href="#planes" class="btn">
+Ver planes
+</a>
+
 </header>
 
 
-<section>
-    <h2>¿Qué hacemos?</h2>
-    <p>
-        Configuraciones avanzadas de Windows, BIOS, drivers y ajustes
-        competitivos para mejorar el rendimiento en juegos.
-    </p>
 
-    <div class="cards">
-        <div class="card">
-            <h3>⚡ Optimización Windows</h3>
-            <p>Limpieza, ajustes de rendimiento y reducción de procesos innecesarios.</p>
-        </div>
+<section class="about">
 
-        <div class="card">
-            <h3>🔥 BIOS Tuning</h3>
-            <p>Configuraciones para mejorar estabilidad y rendimiento.</p>
-        </div>
+<h2>¿Qué es FRXN?</h2>
 
-        <div class="card">
-            <h3>🎮 Gaming</h3>
-            <p>Mejor experiencia en Fortnite, Valorant, CS2 y más.</p>
-        </div>
-    </div>
+<p>
+FRXN Optimizations es un servicio dedicado a mejorar la experiencia
+gaming mediante ajustes de Windows, configuraciones del sistema y
+optimizaciones personalizadas.
+
+Nuestro objetivo es ayudarte a aprovechar al máximo tu equipo y conseguir
+un sistema más limpio, rápido y preparado para jugar.
+</p>
+
 </section>
+
 
 
 <section id="planes">
 
-<h2>Planes</h2>
+<h2>Planes de optimización</h2>
+
 
 <div class="plans">
 
+
 <div class="plan">
+
 <h3>FREE</h3>
-<p>Optimización básica</p>
-<ul>
-<li>Limpieza Windows</li>
-<li>Configuraciones básicas</li>
-<li>Guía de rendimiento</li>
-</ul>
-<button>Gratis</button>
-</div>
 
-
-<div class="plan premium">
-<h3>PRO</h3>
-<p>$2.50 USD</p>
-<ul>
-<li>Windows avanzado</li>
-<li>Optimización gaming</li>
-<li>Ajustes competitivos</li>
-</ul>
-<button>Comprar</button>
-</div>
-
-
-<div class="plan premium">
-<h3>ULTRA</h3>
-<p>$5 USD</p>
-<ul>
-<li>Todo PRO</li>
-<li>BIOS personalizada</li>
-<li>Optimización completa</li>
-</ul>
-<button>Comprar</button>
-</div>
-
-
-<div class="plan premium">
-<h3>MAX</h3>
-<p>$10 USD</p>
-<ul>
-<li>Todo incluido</li>
-<li>Soporte personalizado</li>
-<li>Configuración completa</li>
-</ul>
-<button>Comprar</button>
-</div>
-
-
-</div>
-
-</section>
-
-
-<section>
-<h2>Contacto</h2>
-
-<p>
-¿Querés mejorar tu PC?
-Contactanos y empezá tu optimización.
+<p class="price">
+Gratis
 </p>
 
-<a class="btn" href="#">
-Contactar
-</a>
+<ul>
+<li>Optimización básica</li>
+<li>Ajustes iniciales</li>
+<li>Acceso mediante Discord</li>
+</ul>
+
+<button onclick="openBuy('FREE')">
+Solicitar FREE
+</button>
+
+</div>
+
+
+
+<div class="plan">
+
+<h3>PRO</h3>
+
+<p class="price">
+$2.50 USD
+</p>
+
+<ul>
+<li>Optimización avanzada</li>
+<li>Ajustes gaming</li>
+<li>Configuración personalizada</li>
+</ul>
+
+<button onclick="openBuy('PRO - $2.50 USD')">
+Comprar
+</button>
+
+</div>
+
+
+
+<div class="plan">
+
+<h3>ULTRA</h3>
+
+<p class="price">
+$5 USD
+</p>
+
+<ul>
+<li>Optimización completa</li>
+<li>Mejoras de rendimiento</li>
+<li>Ajustes competitivos</li>
+</ul>
+
+<button onclick="openBuy('ULTRA - $5 USD')">
+Comprar
+</button>
+
+</div>
+
+
+
+
+<div class="plan premium">
+
+<h3>MAX</h3>
+
+<p class="price">
+$10 USD
+</p>
+
+<ul>
+<li>Todo incluido</li>
+<li>Configuración personalizada</li>
+<li>Soporte por Discord</li>
+</ul>
+
+<button onclick="openBuy('MAX - $10 USD')">
+Comprar
+</button>
+
+</div>
+
+
+</div>
+
 
 </section>
+
+
+
+<section class="payments">
+
+<h2>Métodos de pago</h2>
+
+<p>
+💳 Mercado Pago<br>
+💵 USD<br>
+🌎 Otros métodos disponibles mediante Discord
+</p>
+
+
+</section>
+
+
+
+
+<section class="contact">
+
+<h2>Comunidad FRXN</h2>
+
+<p>
+Unite a nuestro Discord para solicitar tu optimización,
+abrir tickets y recibir soporte.
+</p>
+
+
+<a class="btn" 
+href="https://discord.gg/ZzPRVuwuS"
+target="_blank">
+
+Abrir Discord
+
+</a>
+
+
+</section>
+
+
+
+
+
+<div id="popup" class="popup">
+
+
+<div class="popup-box">
+
+
+<h2 id="selectedPlan">
+</h2>
+
+
+<p id="paymentText">
+</p>
+
+
+<a href="https://discord.gg/ZzPRVuwuS"
+target="_blank"
+class="btn">
+
+Abrir Ticket Discord
+
+</a>
+
+
+<button onclick="closeBuy()">
+Cerrar
+</button>
+
+
+</div>
+
+</div>
+
+
+
 
 
 <footer>
-© 2026 FRXN Optimizations - Todos los derechos reservados
+
+© 2026 FRXN Optimizations
+
 </footer>
 
 
+
 <script src="script.js"></script>
+
 
 </body>
 </html>
